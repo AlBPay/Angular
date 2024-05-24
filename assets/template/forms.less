@@ -1,0 +1,30 @@
+.form-control-@{checkout} {
+  border: 1px solid #dddfe2;
+  border-radius: 0;
+  box-shadow: none;
+  &:focus {
+    border-color: #dddfe2;
+    outline: 0;
+    box-shadow: none;
+  }
+  &::-moz-placeholder {
+    color: #91959d;
+    font-weight: 400;
+    font-size: 12px;
+    opacity: 1;
+  }
+  &:-ms-input-placeholder {
+    color: #91959d;
+    font-weight: 400;
+    font-size: 12px;
+  }
+  &::-webkit-input-placeholder  {
+    color: #91959d;
+    font-weight: 400;
+    font-size: 12px;
+  }
+}
+.has-error .form-control-@{checkout} {
+  border-color: #fa3e3e;
+  background: #ffffff data-uri('assets/img/error-input.png') no-repeat right 8px center;
+}

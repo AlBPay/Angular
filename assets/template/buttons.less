@@ -1,0 +1,24 @@
+.btn-@{checkout} {
+  .button-variant(#fff; #4267b2; #4267b2);
+
+  transition: 200ms cubic-bezier(.08,.52,.52,1) background-color, 200ms cubic-bezier(.08,.52,.52,1) box-shadow, 200ms cubic-bezier(.08,.52,.52,1) transform;
+  border-radius: 2px;
+  font-size: 12px;
+  font-weight: bold;
+  height: 28px;
+  line-height: 26px;
+  padding: 0 10px;
+
+  &:hover {
+    background-color: #365899;
+    border-color: #365899;
+  }
+  &:active {
+    background-color: #29487d;
+    border-color: #29487d;
+  }
+  &:focus {
+    box-shadow: 0 0 1px 2px rgba(88, 144, 255, .75), 0 1px 1px rgba(0, 0, 0, .15);
+    outline: none;
+  }
+}

@@ -1,0 +1,41 @@
+<!doctype html>
+<html ng-app="app">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Checkout Examples</title>
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.7/css/bootstrap.min.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.6.5/angular.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/angular-ui-bootstrap/2.5.0/ui-bootstrap-tpls.min.js"></script>
+
+    <link rel="stylesheet" href="../../dist/checkout.css">
+    <script src="../../dist/checkout.js"></script>
+
+    <script src="script.js"></script>
+</head>
+<body ng-controller="Demo">
+<div class="container">
+    <div class="row">
+        <div class="col-sm-6">
+            <h2 class="text-center">Facebook style</h2>
+            <div mx-checkout on-error="error(response)" on-success="success(response)">
+                <input mx-checkout-field type="hidden" value="1545859" name="merchant_id">
+                <input mx-checkout-field type="hidden" value="UAH" name="currency">
+                <input mx-checkout-field type="hidden" value="200" name="amount">
+                <input mx-checkout-field type="hidden" value="email@email.email" name="email">
+            </div>
+        </div>
+        <div class="col-sm-6">
+            <h2 class="text-center">Bootstrap default style</h2>
+            <div mx-checkout on-error="error(response)" on-success="success(response)" mx-checkout-options="checkoutOptions">
+                <input mx-checkout-field type="hidden" value="1545859" name="merchant_id">
+                <input mx-checkout-field type="hidden" value="UAH" name="currency">
+                <input mx-checkout-field type="hidden" value="200" name="amount">
+                <input mx-checkout-field type="hidden" value="email@email.email" name="email">
+            </div>
+        </div>
+    </div>
+</div>
+</body>
+</html>

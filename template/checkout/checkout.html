@@ -1,0 +1,24 @@
+<div ng-transclude></div>
+<div>
+    <uib-accordion>
+        <div
+                uib-accordion-group
+                class="panel {{::data.options.panelClass}}"
+                ng-repeat="tabId in ::data.options.tabs"
+                ng-init="tab = data.config.tabs[tabId]"
+                is-open="tab.open"
+                is-disabled="tab.open"
+        >
+            <uib-accordion-heading ng-click="">
+                <span class="tab-icons">
+                    <i class="i i-{{::icon}}" ng-repeat="icon in ::tab.icons" ng-click="stop($event)"></i>
+                </span>
+                {{::tab.name}}
+            </uib-accordion-heading>
+            <div  ng-include="'mx/template/checkout/' + tab.id + '.html'"></div>
+        </div>
+    </uib-accordion>
+    <div class="lock"><i class="i i-lock"></i> Your payment info is stored securely</div>
+    <hr>
+    <div class="text-right"><button type="button" class="btn {{::data.options.btnClass}}" ng-click="formSubmit()" ng-disabled="data.disabled">Checkout</button></div>
+</div>

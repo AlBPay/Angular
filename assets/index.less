@@ -1,0 +1,113 @@
+@bootstrap-path: 'node_modules/bootstrap/less/';
+@checkout: checkout;
+
+@import "variables";
+@import "@{bootstrap-path}mixins";
+@import "template/index";
+
+[mx-checkout] {
+  @import "icon";
+
+  max-width: 400px;
+  margin: auto;
+  width: 100%;
+
+  label{
+    color: #4b4f56;
+    font-weight: bold;
+    font-size: 12px;
+    line-height: 16px;
+    word-wrap: break-word;
+    display: block;
+    margin-bottom: 0;
+
+    > span{
+      margin-bottom: 8px;
+      display: inline-block;
+    }
+  }
+
+  .form-group{
+    margin-bottom: 8px;
+  }
+  [name="data.card.formCtrl"] .form-group{
+    white-space: nowrap;
+  }
+
+  .text-muted {
+    color: inherit;
+  }
+
+  a:focus {
+    outline: none;
+  }
+
+  iframe {
+    display: block;
+    width: 100%;
+  }
+
+  .tab-icons{
+    float: right;
+    margin-top: -3px;
+    i {
+      margin: 0 2px;
+    }
+  }
+
+  .payment-systems{
+    text-align: center;
+  }
+  .payment-system {
+    display: inline-block;
+    width: 120px;
+    vertical-align: top;
+
+    .i-payment-system{
+      &:after{
+        content: '';
+        width: 12px;
+        height: 8px;
+        position: absolute;
+        top: 4px;
+        left: 4px;
+        border: none;
+        transform: rotate(-45deg);
+        transition: border 0.3s linear;
+      }
+    }
+
+    &.active .i-payment-system{
+      background-color: #fff;
+      background-position: 0 0;
+      &:after{
+        border: 4px solid #5B9B21;
+        border-top: none;
+        border-right: none;
+      }
+    }
+  }
+
+  .lock{
+    color: #90949c;
+    font-size: 12px;
+  }
+
+  .col-card{
+    padding-right: 0;
+  }
+
+  .col-expire-month{
+    padding-right: 2px;
+  }
+
+  .col-expire-year{
+    padding-left: 2px;
+  }
+
+  .col-cvv{
+    .form-group{
+      margin-bottom: 0;
+    }
+  }
+}

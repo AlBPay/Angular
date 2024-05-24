@@ -1,0 +1,29 @@
+<form name="data.card.formCtrl" ng-submit="formSubmit()" novalidate>
+    <div class="row">
+        <div class="col-xs-12">
+            <mx-alert alert="data.card.alert"></mx-alert>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-xs-7 col-card">
+            <div mx-field-input="data.card" config="data.config.fields.card" blur="blur(inputCtrl, data.card)" focus="focus(inputCtrl, data.card)"></div>
+        </div>
+        <div class="col-xs-5">
+            <div class="row">
+                <div class="col-xs-6 col-expire-month">
+                    <div mx-field-input="data.card" config="data.config.fields.expireMonth" blur="blur(inputCtrl, data.card)" focus="focus(inputCtrl, data.card)"></div>
+                </div>
+                <div class="col-xs-6 col-expire-year">
+                    <div mx-field-input="data.card" config="data.config.fields.expireYear" blur="blur(inputCtrl, data.card)" focus="focus(inputCtrl, data.card)"></div>
+                </div>
+            </div>
+        </div>
+
+    </div>
+    <div class="row">
+        <div class="col-xs-4 col-cvv">
+            <div mx-field-input="data.card" config="data.config.fields.cvv" blur="blur(inputCtrl, data.card)" focus="focus(inputCtrl, data.card)"></div>
+        </div>
+    </div>
+    <input type="submit" style="position: absolute; left: -9999px; width: 1px; height: 1px;" tabindex="-1" />
+</form>

@@ -1,0 +1,27 @@
+.alert-@{checkout}-danger {
+  .alert-variant(#fa3e3e; #fa3e3e; #1d2129);
+
+  border-radius: 3px;
+  overflow: hidden;
+  padding: 0 0 0 40px;
+  position: relative;
+  font-size: 12px;
+  line-height: 16px;
+  margin-bottom: 10px;
+
+  .alert-inner{
+    background: #fff;
+    padding: 9px 10px;
+    &:before{
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      bottom: 0;
+      width: 40px;
+      background-position: 50% 8px;
+      background-image: data-uri('assets/img/error.png');
+      background-repeat: no-repeat;
+    }
+  }
+}
